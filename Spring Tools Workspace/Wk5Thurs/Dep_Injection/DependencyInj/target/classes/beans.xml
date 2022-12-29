@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="customer" class="com.accenture.Customer">
-		<property name="name" value="James"></property>
-		<property name="phone_no" value="91112111"></property>
-		<property name="premium" value="true"></property>
-	</bean>
-	<bean id="delivery" class="com.accenture.Delivery">
-		<constructor-arg name="address" value="Kuala Lumpur"></constructor-arg>
-	</bean>
-	<bean id="courier" class="com.accenture.Courier">
-		<property name="address" ref="delivery"></property>
-		<property name="companyName" value="DHL"></property>
-		<property name="cost" value="50.07"></property>
-	</bean>
-</beans>
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<!--component scan base package will scan the whole package for annotations-->
+	<context:component-scan base-package="com.accenture" />
+</beans><!--you can delete this file beans.xml as soon as you have BeanConfig.java class-->

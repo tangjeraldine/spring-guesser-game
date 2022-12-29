@@ -1,26 +1,8 @@
 package com.accenture;
 
+import org.springframework.stereotype.Component;
+
+//@Component("delivery")
 public class Delivery {
-	private String address;
-
-	//constructor based injection
-	public Delivery(String address) {
-		super();
-		this.address = address;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	@Override
-	public String toString() {
-		return "Delivery [address=" + address + "]";
-	}
-	
-	
+	// create a bean with id of "delivery" using the @Component annotation
 }
